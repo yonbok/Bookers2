@@ -1,0 +1,15 @@
+<%= form_with model: book do |f| %>
+
+  <h4>本のタイトル</h4>
+  <%= f.text_field :title %>
+
+  <h4>感想</h4>
+  <%= f.text_area :body %>
+
+
+  <%= f.submit 'Update Book' %>
+
+  <%= link_to "Show", book_path(@book.id) %>
+  <%= link_to "Back", books_path %>
+
+<% end %>
