@@ -1,4 +1,4 @@
-class BookersController < ApplicationController
+class BooksController < ApplicationController
   def new
     @book = Book.new
   end
@@ -15,6 +15,7 @@ class BookersController < ApplicationController
   end
 
   def show
+    @book = Book.find(params[:id])
   end
 
 
