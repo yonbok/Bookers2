@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    if @user.save
+      redirect_to books
+    else
+      redirect_to edit
   end
 
   def update
