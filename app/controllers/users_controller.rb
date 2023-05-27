@@ -6,7 +6,9 @@ class UsersController < ApplicationController
       redirect_to books
     else
       redirect_to edit
+    end
   end
+
 
   def update
     @user = User.all

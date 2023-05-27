@@ -4,11 +4,11 @@ class BooksController < ApplicationController
   end
 
   def create
-    @books = Book.new(books_params)
+    @book = Book.new(books_params)
     @book.user_id = current_user.id
     if @book.save
      flash[:notice] = "Welcome! You have signed up successfully."
-     redirect_to books
+     redirect_to book_path(@book.id)
     else
       render :index
     end
@@ -17,11 +17,12 @@ class BooksController < ApplicationController
   def index
     @book = Book.new
     @books = Book.all
+    @user = current_user
   end
 
-  # def show
-  #   @book = Book.find(params[:id])
-  # end
+  def show
+    @book = Book.find(params[:id])
+  end
 
   def destroy
     book = Book.find(params[:id])
