@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
 
+  def show
+  end
+
+
   def edit
     @user = User.find(params[:id])
+    @user.edit
     if @user.save
-      redirect_to books
+      redirect_to books_url
     else
       redirect_to edit
     end
