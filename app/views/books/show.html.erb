@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-lg-4">
   <h1>User info</h1>
-  <p><%= image_tag @user.get_profile_image(100,100) %></p>
+  <p><%= image_tag @user.get_profile_image(100, 100) %></p>
   <p>name: <%= @user.name %></p>
   <p>introduction: <%= @user.introduction %></p>
 
@@ -47,15 +47,14 @@
     </thead>
    </div>
      <tbody>
-    <% @books.each do |book| %>
+
       <tr>
         <td><%= image_tag @user.get_profile_image(100,100) %></td>
-        <td><%= book.title %></td>
-        <td><%= book.body %></td>
-        <td><%= link_to "Edit", edit_user_path(book.id), class: "btn btn-green" %></td>
-        <td><%= link_to "Destroy",book_path(book.id), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-red" %></td>
+        <td><%= @book.title %></td>
+        <td><%= @book.body %></td>
+        <td><%= link_to "Edit", edit_user_path(@book.id), class: "btn btn-green" %></td>
+        <td><%= link_to "Destroy",book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-red" %></td>
       </tr>
-    <% end %>
     </tbody>
   </div>
 </div>

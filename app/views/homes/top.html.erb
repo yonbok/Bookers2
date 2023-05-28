@@ -43,21 +43,31 @@
 <!--  </body>-->
 
 
-<h1>welcome to Bookers!!</h1>
-<h4>
-  <p>In Bookers</p>
-  <p>you can share and exchange your opinions , inpressions , and emotions</p>
-  <p>about various books!</p>
-</h4>
+
+<div calss="container">
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-3">
+    <h1>welcome to Bookers!!</h1>
+    <h4>
+    <p>In Bookers</p>
+    <p>you can share and exchange your opinions , inpressions , and emotions</p>
+    <p>about various books!</p>
+    </h4>
 
 <!--<%= form_with model: @user do |f| %>-->
 <!--    <%= f.submit "Log in" %>-->
 <!--    <%= f.submit "Sign in" %>-->
 <!--  <% end %>-->
 
-  <li>
-     <%= link_to "Log in", new_user_session_path %>
-  </li>
-  <li>
-     <%= link_to "Sign in", new_user_registration_path  %>
-  </li>
+    <li>
+     <%= link_to "Log in", new_user_session_path, class: "btn btn-blue" %>
+    </li>
+    <li>
+     <%= link_to "Sign in", new_user_registration_path, class: "btn btn-green" %>
+    </li>
+  </div>
+  <div class="col-lg-1"></div>
+  </div>
+</div>
+

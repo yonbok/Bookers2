@@ -22,7 +22,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    @users =  User.new
+    @user =  @book.user
   end
 
   def destroy
