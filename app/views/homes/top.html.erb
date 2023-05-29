@@ -45,12 +45,12 @@
 
 
 <div calss="container">
-  <div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-3">
-    <h1>welcome to Bookers!!</h1>
+  <!--<div class="row">-->
+  <!--  <div class="col-lg-1"></div>-->
+  <!--  <div class="col-lg-3">-->
+    <h1>welcome to <i class="fas fa-book"></i>Bookers!!</h1>
     <h4>
-    <p>In Bookers</p>
+    <p>In <i class="fas fa-book"></i>Bookers</p>
     <p>you can share and exchange your opinions , inpressions , and emotions</p>
     <p>about various books!</p>
     </h4>
@@ -60,14 +60,10 @@
 <!--    <%= f.submit "Sign in" %>-->
 <!--  <% end %>-->
 
-    <li>
-     <%= link_to "Log in", new_user_session_path, class: "btn btn-blue" %>
-    </li>
-    <li>
-     <%= link_to "Sign in", new_user_registration_path, class: "btn btn-green" %>
-    </li>
-  </div>
-  <div class="col-lg-1"></div>
-  </div>
-</div>
+
+     <p><%= link_to "Log in", new_user_session_path, class: "btn btn-blue" %></p>
+
+     <p><%= link_to "Sign in", new_user_registration_path, class: "btn btn-green" %></p>
+
+
 
