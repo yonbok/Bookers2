@@ -44,13 +44,13 @@
     </thead>
    </div>
      <tbody>
-    <!--<% @books.each do |book| %>-->
+    <% @users.each do |user| %>
       <tr>
-        <td><%= image_tag book.user.get_profile_image(100, 100) %></td>
-        <td><%= book.title %></td>
-        <td><%= book.body %></td>
+        <td><%= image_tag user.get_profile_image(100, 100) %></td>
+        <td><%= user.name %></td>
+        <td><%= link_to "Show", user_path(user.id) %></td>
       </tr>
-    <!--<% end %>-->
+    <% end %>
     </tbody>
   </div>
 </div>

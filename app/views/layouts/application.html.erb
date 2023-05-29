@@ -25,39 +25,45 @@
             <ul class="navbar-nav ml-auto">
 
         <% if user_signed_in? %>
-        <a class="nav-link text-light" href="/">
+          <%= link_to root_path do %>
           <i class="fas fa-home"></i>
-          <%= link_to "Home", root_path %>
-        </a>
-        <a class="nav-link text-light" href="/">
+          Home
+          <% end %>
+
+          <%= link_to users_path do %>
           <i class="fas fa-users"></i>
-          <%= link_to "Users", user_session_path %>
-        </a>
-        <a class="nav-link text-light" href="/">
+          Users
+          <% end %>
+
+          <%= link_to books_path do  %>
           <i class="fas fa-book-open"></i>
-          <%= link_to "Books", books_path  %>
-        </a>
-        <a class="nav-link text-light" href="/">
+          Books
+          <% end %>
+
+          <%= link_to destroy_user_session_path, method: :delete do  %>
           <i class="fas fa-sign-out-alt"></i>
-          <%= link_to "Log out", destroy_user_session_path  %>
-        </a>
+          Log out
+          <% end %>
       <% else %>
-        <a class="nav-link text-light" href="/">
+          <%= link_to root_path do %>
           <i class="fas fa-home"></i>
-          <%= link_to "Home", root_path %>
-        </a>
-        <a class="nav-link text-light" href="/">
+          Home
+          <% end %>
+
+          <%= link_to about_path do %>
           <i class="fas fa-link"></i>
-          <%= link_to "About", homes_about_path %>
-        </a>
-        <a class="nav-link text-light" href="/">
+          About
+          <% end %>
+
+          <%= link_to  new_user_registration_path do  %>
           <i class="fas fa-user-plus"></i>
-          <%= link_to "Sign Up", new_user_registration_path  %>
-        </a>
-        <a class="nav-link text-light" href="/">
+          Sign up
+          <% end %>
+
+          <%= link_to user_session_path do %>
           <i class="fas fa-sign-in-alt"></i>
-          <%= link_to "Log in", user_session_path   %>
-        </a>
+          Log in
+          <% end %>
       <% end %>
         </ul>
        </div>
