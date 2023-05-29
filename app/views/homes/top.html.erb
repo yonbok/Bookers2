@@ -1,48 +1,4 @@
-<!--<body class="d-flex flex-column vh-100">-->
-<!--    <header class="shadow-sm">-->
-<!--      <nav class="navbar navbar-expand-lg navbar-light">-->
-<!--        <div class="container">-->
-<!--          <a class="navbar-brand p-3" href="/"></a>-->
-<!--          <div class="social"></div>-->
-<!--          <div class="collapse navbar-collapse" id="navbarNavDropdown">-->
-<!--            <ul class="navbar-nav ml-auto">-->
-
-<!--        <% if user_signed_in? %>-->
-<!--        <li class="nav-item">-->
-<!--          <%= link_to "Home", root_path %>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <%= link_to "Users", user_session_path %>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <%= link_to "Books", books_path  %>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--          <%= link_to "Log out", destroy_user_session_path  %>-->
-<!--        </li>-->
-<!--      <% else %>-->
-<!--        <li class="nav-item">-->
-<!--          <%= link_to "Home", root_path %>-->
-<!--        </li>-->
-<!--        <li class"nav-item">-->
-<!--          <%= link_to "About", about_path %>-->
-<!--        </li>-->
-<!--        <li class"nav-item">-->
-<!--          <%= link_to "Sign Up", new_user_registration_path  %>-->
-<!--        </li>-->
-<!--        <li class"nav-item">-->
-<!--          <%= link_to "Log in", user_session_path   %>-->
-<!--        </li>-->
-<!--      <% end %>-->
-<!--        </ul>-->
-<!--       </div>-->
-<!--      </div>-->
-<!--      </nav>-->
-<!--    </header>-->
-<!--    <%= yield %>-->
-<!--  </body>-->
-
-
+<div><%= flash[:notice] %></div>
 
 <div calss="c enter-block">
   <!--<div class="row">-->
@@ -64,7 +20,7 @@
      <%= link_to "Log in", user_session_path, class: "btn btn-secondary-blue" %>
     </button></p>
     <p><button class="button">
-     <%= link_to "Sign in", new_user_registration_path, class: "btn btn-secondary-green" %>
+     <%= link_to "Sign up", new_user_registration_path, class: "btn btn-secondary-green" %>
     </button></p>
   </div>
 

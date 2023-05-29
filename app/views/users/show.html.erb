@@ -7,6 +7,12 @@
   <p>introduction: <%= @user.introduction %></p>
 
 
+
+  <div class="row">
+    <%= link_to edit_user_path(current_user), class:"btn btn-outline-secondary btn-block" do %>
+      <i class="fas fa-user-cog"></i>
+    <% end %>
+    </div>
   <h1>New book</h1>
   <% if @book.errors.any? %>
   <%= @book.errors.count %>error prohibited this obj from being saved:
