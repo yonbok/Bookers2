@@ -1,9 +1,11 @@
 <div><%= flash[:notice] %></div>
 
-<div calss="c enter-block">
   <!--<div class="row">-->
   <!--  <div class="col-lg-1"></div>-->
   <!--  <div class="col-lg-3">-->
+  <div class="container px-5 px-sm-0">
+   <div class="row">
+    <div class="col-md-3">
     <h1>welcome to <i class="fas fa-book"></i>Bookers!!</h1>
     <h4>
     <p>In <i class="fas fa-book"></i>Bookers</p>
@@ -11,10 +13,6 @@
     <p>about various books!</p>
     </h4>
 
-<!--<%= form_with model: @user do |f| %>-->
-<!--    <%= f.submit "Log in" %>-->
-<!--    <%= f.submit "Sign in" %>-->
-<!--  <% end %>-->
 
     <p><button class="button">
      <%= link_to "Log in", user_session_path, class: "btn btn-secondary-blue" %>
@@ -22,6 +20,7 @@
     <p><button class="button">
      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-secondary-green" %>
     </button></p>
-  </div>
-
+    </div>
+   </div>
+ </div>
 
