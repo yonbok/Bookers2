@@ -3,7 +3,11 @@
     <div class="col-md-3">
       <h1>User info</h1>
         <table class="table">
-          <tr><%= image_tag @user.get_profile_image(100, 100) %></tr>
+          <tr><%#= image_tag @user.get_profile_image(100, 100) %>
+           <%= link_to user_path(@user.id) do %>
+            <%= image_tag @user.get_profile_image(100,100) %>
+           <% end %>
+          </tr>
           <tr>
             <th>name: <%= @user.name %></th>
           </tr>
