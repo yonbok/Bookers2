@@ -8,15 +8,7 @@
     <div class='col-md-8 offset-md-1'>
       <h2>Book detail</h2>
       <table class='table table-hover table-inverse'>
-     <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Opinion</th>
-      <th colspan="2"></th>
-    </tr>
-    </thead>
-   </div>
+    </div>
 
       <tr>
         <td>
@@ -28,14 +20,14 @@
         <td><%= link_to @book.title, book_path(@book.id) %></td>
         <td><%= @book.body %></td>
         <td>
-          <%# if @user == current_user %>
+          <% if @user == current_user %>
             <%= link_to "Edit", edit_book_path(@book.id), class: "btn btn-success" %>
-          <%# end %>
+          <% end %>
         </td>
         <td>
-          <%# if @user == current_user %>
+          <% if @user == current_user %>
             <%= link_to "Destroy",book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-danger" %>
-          <%# end %>
+          <% end %>
         </td>
       </tr>
     </tbody>
