@@ -1,6 +1,6 @@
 <div><%= flash[:notice] %></div>
 
-<%= render 'books', books: @books %>
+<%= render 'books', {user: @user, book: @book} %>
 
   <!--<div class="col-lg-8">-->
   <!--<table class="table table-striped">-->
